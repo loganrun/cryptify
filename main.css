@@ -4,17 +4,21 @@ html, body{
   padding: 0;
   background-color: /*#555555*/ #262626;
 }
+.nav-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+}
 nav{
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #425822 /*#2ACDFF*/;
+  background-color: #425822 /*#2ACDFF /*#52BE1D*/;
   text-align: center;
 }
 .logo{
   font-family: 'Roboto', sans-serif;
   color: #fff;
-  font-size: 25px;
+  font-size: 45px;
   text-decoration: none;
 }
 
@@ -32,6 +36,8 @@ nav{
     }
 
 .form-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
   width: 450px;
   padding: 15px;
   margin: 150px auto 50px auto;
@@ -106,9 +112,8 @@ nav{
 }
 
 #chart{
-  margin: 0 auto;
-  height: 400px;
-  width: 400px;
+  height: 650px;
+  width: 650px;
 }
 .container{
   width: 960px;
@@ -116,26 +121,31 @@ nav{
   margin: 0 auto;
   background-color: #fff;
 }
-.nav-wrapper{
-  padding-left: 10px;
-}
-.wrapper{
+
+.chart-wrapper{
   display:grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr;
   grid-auto-rows: minmax(100px, auto);
 }
 .nested{
-  display: grid;
+  display: none;
   margin-left: 20px;
 }
 .feed{
   display: grid;
   box-sizing: border-box;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-auto-rows: minmax(100px, auto);
-  grid-column-gap: 5px;
+  grid-gap: 5px;
+  margin-right: 20px;
   margin-left: 20px;
   margin-top: 50px;
+}
+
+.article img{
+  width: 100%;
+  height: auto;
+  background-size: contain;
 }
 
 .buttonArt{
@@ -150,7 +160,13 @@ nav{
   padding: 10px 20px;
   background-color: #018ABE;
 }
+@media(min-width: 760px){
+  .nested{
+    display: grid;
+    margin-left: 20px;
+  }
+  .feed{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
-.article img{
-  width: 100%;
+  }
 }

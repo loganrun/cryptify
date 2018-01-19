@@ -131,10 +131,12 @@ $(document).ready(() => {
       const CHART = $('#lineChart');
       let lineChart = new Chart(CHART, {
         type:'line',
+        backgroundColor: '#00A8A8',
         data:{
           labels: cryptoTime,
           datasets: [{
-            data: cryptoClose
+            data: cryptoClose,
+            backgroundColor:  '#1fe052'
           }]
         }
       })
