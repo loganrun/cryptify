@@ -116,7 +116,8 @@ nav{
   width: 650px;
 }
 .container{
-  width: 960px;
+  width: 100%;
+  /*width: 960px;*/
   height: auto;
   margin: 0 auto;
   background-color: #fff;
@@ -161,6 +162,9 @@ nav{
   background-color: #018ABE;
 }
 @media(min-width: 760px){
+  .container{
+    width: 960px;
+  }
   .nested{
     display: grid;
     margin-left: 20px;

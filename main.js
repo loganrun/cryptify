@@ -121,7 +121,7 @@ $(document).ready(() => {
               <h5>${title}</h5>
               <h5>${author}</h5>
               <h5>${desc}<h5>
-              <a href="${link}" class="buttonArt">VIEW</a>
+              <a href="${link}" class="buttonArt" target="_blank">VIEW</a>
             </div>
         </div>
         `)
