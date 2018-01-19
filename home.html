@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <title>Cryptify</title>
+</head>
+<body>
+  <header>
+    <nav>
+    <div class=" nav-wrapper" role="navigation">
+      <a href="#" class="logo">Cryptify</a>
+    </div>
+  </nav>
+  </header>
+  <section role="search">
+    <div id= "sb-search" class="form-wrapper cf">
+        <form id="searchForm" role="search">
+            <input class="sb-search-input" id="search" placeholder="Enter your search terms" type="search" value="" name="search" required>
+            <button class="searchCurr"type="submit">Search</button>
+        </form>
+    </div>
+  </section>
+
+  <div class="container">
+  <div class="wrapper">
+    <div class="nested">
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, assumenda!</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, nihil!</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quod.</div>
+    </div>
+    <div id="chart">
+      <canvas id="lineChart" height="400" width="400"></canvas>
+    </div>
+    <div></div>
+  </div>
+  <div class="feed"></div>
+  </div>
+
+  <!-- <script type="text/javascript">
+  // window.load = getMyLocation;
+  // var map;
+  //  function getMyLocation(){
+  //    if (navigator.geolocation){
+  //     //  navigator.geolocation.getCurrentPosition(displayLocation);
+  //      console.log("true");
+  //    }else{
+  //      alert('no geolocation support');
+  //    }
+  //  }
+  //
+  // function displayLocation(position){
+  //   var latitude = position.coords.latitude;
+  //   var longitude = position.coords.longitude;
+  //   var latLng = new google.maps.latLng(latitude, longitude);
+  //
+  //   initMap(latLng);
+  // }
+
+
+  function initMap(){
+    map = new google.maps.Map(document.getElementById('map'),{
+      center: {lat: 34.0522, lng: -118.2437},
+      zoom: 8
+    });
+  }
+
+  </script> -->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKd0ZHOGN4-jozvPAk3hoDvdHHJZr1aIY&libraries=places&callback=initMap"
+    async defer></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
