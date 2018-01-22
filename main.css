@@ -114,6 +114,7 @@ nav{
 #chart{
   height: 650px;
   width: 650px;
+  margin-top: 20px;
 }
 .container{
   width: 960px;
@@ -124,12 +125,12 @@ nav{
 
 .chart-wrapper{
   display:grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-auto-rows: minmax(100px, auto);
+  margin-top: 20px;
 }
 .nested{
   display: none;
-  margin-left: 20px;
 }
 .feed{
   display: grid;
@@ -164,6 +165,9 @@ nav{
   .nested{
     display: grid;
     margin-left: 20px;
+    margin-top: 20px;
+    background: #d83c3c;
+    padding-left: 10px;
   }
   .feed{
     grid-template-columns: 1fr 1fr 1fr 1fr;

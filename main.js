@@ -1,14 +1,24 @@
 $(document).ready(() => {
+  let urlParams = new URLSearchParams(window.location.search);
+  console.log(urlParams);
+  let searchText = urlParams.get('search');
+  if(searchText){
+    cryptoMarket();
+    validateIndex(searchText);
+  }else{
+    window.location = "index.html";
+  }
+
   $('#searchForm').on('submit', (e) =>{
-    let searchText = $('#search').val().toLowerCase();
+    let searchText = $('#search').val();
     $('.feed').empty();
       e.preventDefault();
-      console.log(searchText)
-      validateIndex(searchText);
+    console.log(searchText)
+    validateIndex(searchText);
   });
 
   function validateIndex(searchText){
-    let index = searchText;
+    let index = searchText.toLowerCase();
     console.log(index);
     switch (index){
       case 'ethereum':
@@ -68,6 +78,23 @@ $(document).ready(() => {
     }
   }
 
+  function cryptoMarket(){
+    $.ajax({
+      url:  'https://api.coinmarketcap.com/v1/ticker/?limit=5'
+    }).done(function(response){
+      let cap = response;
+      $.each(cap, (index, item)=>{
+        let name = item.name;
+        let symbol = item.symbol;
+        let rank = item.rank;
+        let market = item.market_cap_usd;
+        let price = item.price_usd;
+        console.log(name);
+        renderMarket(name, symbol,rank,price,market);
+      })
+    })
+  }
+
 
   function getArticles(index){
     $.ajax({
@@ -113,6 +140,21 @@ $(document).ready(() => {
             createChart(cryptoTime, cryptoClose);
     });
   }
+    function renderMarket(name, symbol,rank,price,market){
+      $('.nested').append(`
+        <div>
+          <div class="ticker">
+
+          <h5>Name: ${name}<h5>
+          <h5>Symbol:${symbol}<h5>
+          <h5>Rank: #${rank}<h5>
+          <h5>Price: $${price}<h5>
+          <h5> Market Capitalization: $${market}<h5>
+          <div>
+        <div>
+        `)
+    }
+
     function renderArticles(author, desc, title, link, image){
       $('.feed').append(`
         <div>
@@ -131,12 +173,11 @@ $(document).ready(() => {
       const CHART = $('#lineChart');
       let lineChart = new Chart(CHART, {
         type:'line',
-        backgroundColor: '#00A8A8',
         data:{
           labels: cryptoTime,
           datasets: [{
             data: cryptoClose,
-            backgroundColor:  '#1fe052'
+            backgroundColor:  '#425822'
           }]
         }
       })
