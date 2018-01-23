@@ -74,7 +74,7 @@ $(document).ready(() => {
       getQuotes(index);
       break;
       default:
-      console.log("Not found");
+      alert("Currency Not Found.  Please Try Again");
     }
   }
 
@@ -87,13 +87,20 @@ $(document).ready(() => {
         let name = item.name;
         let symbol = item.symbol;
         let rank = item.rank;
-        let market = item.market_cap_usd;
+        let market = item.market_cap_usd.toLocaleString('en');
         let price = item.price_usd;
-        console.log(name);
-        renderMarket(name, symbol,rank,price,market);
+        //priceFormat(price);
+        // marketFormat(market);
+        renderMarket(name, symbol,rank, price, market);
       })
     })
   }
+
+  // function priceFormat(price) {
+  // let curr = price.toLocaleString('en');
+  // console.log(curr);
+  // }
+
 
 
   function getArticles(index){
@@ -137,7 +144,7 @@ $(document).ready(() => {
             let cryptoClose = curr.Data.map(item=>item.close);
             console.log(cryptoTime);
             console.log(cryptoClose);
-            createChart(cryptoTime, cryptoClose);
+            createChart(cryptoTime, cryptoClose, index);
     });
   }
     function renderMarket(name, symbol,rank,price,market){
@@ -145,11 +152,11 @@ $(document).ready(() => {
         <div>
           <div class="ticker">
 
-          <h5>Name: ${name}<h5>
-          <h5>Symbol:${symbol}<h5>
-          <h5>Rank: #${rank}<h5>
-          <h5>Price: $${price}<h5>
-          <h5> Market Capitalization: $${market}<h5>
+          <h4>Name: ${name}<h4>
+          <h4>Symbol: ${symbol}<h4>
+          <p>Rank: # ${rank}<p>
+          <p>Price: $ ${price}<p>
+          <h4> Market Capitalization: $${market}<h4>
           <div>
         <div>
         `)
@@ -169,7 +176,7 @@ $(document).ready(() => {
         `)
     }
 
-    function createChart(cryptoTime, cryptoClose){
+    function createChart(cryptoTime, cryptoClose, index){
       const CHART = $('#lineChart');
       let lineChart = new Chart(CHART, {
         type:'line',
@@ -179,6 +186,18 @@ $(document).ready(() => {
             data: cryptoClose,
             backgroundColor:  '#425822'
           }]
+
+        },
+        options:  {
+          title:  {
+            display:  true,
+            text: index,
+            fontSize:  30,
+            fontStyle: 'bold'
+          },
+          legend:{
+            display: false,
+          }
         }
       })
     }

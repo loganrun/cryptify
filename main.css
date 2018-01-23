@@ -117,7 +117,7 @@ nav{
   margin-top: 20px;
 }
 .container{
-  width: 960px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   background-color: #fff;
@@ -160,17 +160,45 @@ nav{
   border: none;
   padding: 10px 20px;
   background-color: #018ABE;
+  margin-left: 5px;
 }
 @media(min-width: 760px){
+  .container{
+    width: 960px;
+  }
   .nested{
     display: grid;
     margin-left: 20px;
     margin-top: 20px;
     background: #d83c3c;
     padding-left: 10px;
+    padding-top: 2px;
   }
+  .nested h4{
+    display: inline-block;
+    font-size: 14px;
+    padding-left: 8px;
+    font-weight: bold;
+    line-height: 0.5;
+    margin: 0;
+  }
+  .nested h5{
+    display: inline-block;
+    font-size: 10px;
+    padding-left: 8px;
+    font-weight: bold;
+    line-height: 0.5;
+    margin: 0;
+  }
+
   .feed{
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  }
+  .feed div:nth-child(even){
+    background-color: #D3ECFF
+  }
+  .ticker{
 
   }
 }
