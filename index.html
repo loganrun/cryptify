@@ -9,27 +9,45 @@
   <title>Cryptify</title>
 </head>
 <body>
-  <header class="v-header container">
-    <div class="fullscreen-video">
-      <video src="rotocoin.mp4" autoplay="true" loop="true" poster="posterimage.jpg"></video>
-    </div>
-    <div class="header-overlay">
-      <div class="initSearch">
+  <!-- <header>
     <div class="header-content">
       <h1>WELCOME TO CRYPTIFY</h1>
       <p>Putting the Crypt in Cryptocurrency</p>
     </div>
-    <section role="search">
+  </header> -->
+  <main>
+    <section>
+      <div class="video-container">
+        <div class="overlay">
+          <div class="fullscreen-video">
+            <video src="rotocoin.mp4" autoplay="true" loop="true" poster="bitcoin.jpg"></video>
+          </div>
+          <div class="overlay-content">
+            <h1>WELCOME TO CRYPTIFY</h1>
+            <p>Putting the Crypt in Cryptocurrency</p>
+            <section role="search">
+              <div id= "sb-search" class="form-wrapper cf">
+                  <form id="searchForm" role="search">
+                      <input class="sb-search-input" id="search" placeholder="Enter your search terms" type="search" value="" name="search" required>
+                      <!-- <button class="searchCurr"type="submit">Search</button> -->
+                  </form>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- <section role="search">
       <div id= "sb-search" class="form-wrapper cf">
           <form id="searchForm" role="search">
               <input class="sb-search-input" id="search" placeholder="Enter your search terms" type="search" value="" name="search" required>
               <button class="searchCurr"type="submit">Search</button>
           </form>
       </div>
-    </section>
-    </div>
-    </div>
-  </header>
+    </section> -->
+  </main>
 
 
 <script src="jquery-3.2.1.min.js" charset="utf-8"></script>

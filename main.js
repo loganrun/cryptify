@@ -74,6 +74,9 @@ $(document).ready(() => {
       getQuotes(index);
       break;
       default:
+      index = 'BTC';
+      getArticles(index);
+      getQuotes(index);
       alert("Currency Not Found.  Please Try Again");
     }
   }
