@@ -42,7 +42,7 @@ body{
   z-index: -100;
 }
 
-.overlay{
+/*.overlay{
   height: 100vh;
   width: 100vw;
   position: absolute;
@@ -50,11 +50,17 @@ body{
   left:0;
   background: rgba(0, 0, 0, 0.5); /*#225470;*/
   /*z-index: 1;*/
-  /*opacity: 0.6;*/*/
-}
+  /*opacity: 0.6;
+}*/
 
 .overlay-content{
-  z-index:2;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left:0;
+  background: rgba(0, 0, 0, 0.9)
+  z-index:1;
   text-align: center;
 
 }
@@ -106,7 +112,7 @@ body{
 .sb-search-input{
   width: 330px;
   height: 40px;
-  float: left;
+  /*float: left;*/
   padding: 10px 5px;
   font:  bold 15px 'Roboto', 'sans-serif';
   border: 0;
@@ -145,7 +151,7 @@ body{
 .searchCurr {
 	overflow: visible;
   position: relative;
-  float: right;
+  /*float: right;*/
   border: 0;
   padding: 0;
   cursor: pointer;
