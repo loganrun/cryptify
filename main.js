@@ -90,7 +90,7 @@ $(document).ready(() => {
         let name = item.name;
         let symbol = item.symbol;
         let rank = item.rank;
-        let market = item.market_cap_usd.toLocaleString('en');
+        let market = parseInt(item.market_cap_usd, 10).toLocaleString('en');
         let price = item.price_usd;
         //priceFormat(price);
         // marketFormat(market);
@@ -173,7 +173,7 @@ $(document).ready(() => {
               <h5>${title}</h5>
               <h5>${author}</h5>
               <h5>${desc}<h5>
-              <a href="${link}" class="buttonArt">VIEW</a>
+              <a href="${link}" class="buttonArt" target="_blank">VIEW</a>
             </div>
         </div>
         `)
