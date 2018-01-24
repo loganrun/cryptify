@@ -170,25 +170,46 @@ nav{
     display: grid;
     margin-left: 20px;
     margin-top: 20px;
-    background: #d83c3c;
-    padding-left: 10px;
-    padding-top: 2px;
   }
-  .nested h4{
+  .mCap h3{
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  .mCap h4{
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  .ticker{
+    background: #d83c3c;
+    color: #fff;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+  .ticker h4{
     display: inline-block;
     font-size: 14px;
     padding-left: 8px;
     font-weight: bold;
     line-height: 0.5;
     margin: 0;
+    padding-top: 5px;
   }
-  .nested h5{
-    display: inline-block;
-    font-size: 10px;
+  .ticker h5{
+    display: block;
+    font-size: 14px;
     padding-left: 8px;
     font-weight: bold;
     line-height: 0.5;
+    padding-bottom: 5px;
     margin: 0;
+  }
+  .ticker p{
+    text-align: left;
   }
 
   .feed{
@@ -198,7 +219,5 @@ nav{
   .feed div:nth-child(even){
     background-color: #D3ECFF
   }
-  .ticker{
 
-  }
 }

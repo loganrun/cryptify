@@ -151,7 +151,7 @@ $(document).ready(() => {
     });
   }
     function renderMarket(name, symbol,rank,price,market){
-      $('.nested').append(`
+      $('.mCap').append(`
         <div>
           <div class="ticker">
 
@@ -159,7 +159,7 @@ $(document).ready(() => {
           <h4>Symbol: ${symbol}<h4>
           <p>Rank: # ${rank}<p>
           <p>Price: $ ${price}<p>
-          <h4> Market Capitalization: $${market}<h4>
+          <h5> Market Capitalization: $${market}<h5>
           <div>
         <div>
         `)
