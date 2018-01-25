@@ -1,6 +1,5 @@
 $(document).ready(() => {
   let urlParams = new URLSearchParams(window.location.search);
-  console.log(urlParams);
   let searchText = urlParams.get('search');
   if(searchText){
     cryptoMarket();
@@ -13,13 +12,11 @@ $(document).ready(() => {
     let searchText = $('#search').val();
     $('.feed').empty();
       e.preventDefault();
-    console.log(searchText)
     validateIndex(searchText);
   });
 
   function validateIndex(searchText){
     let index = searchText.toLowerCase();
-    console.log(index);
     switch (index){
       case 'ethereum':
       case 'eth':
@@ -92,19 +89,10 @@ $(document).ready(() => {
         let rank = item.rank;
         let market = parseInt(item.market_cap_usd, 10).toLocaleString('en');
         let price = item.price_usd;
-        //priceFormat(price);
-        // marketFormat(market);
         renderMarket(name, symbol,rank, price, market);
       })
     })
   }
-
-  // function priceFormat(price) {
-  // let curr = price.toLocaleString('en');
-  // console.log(curr);
-  // }
-
-
 
   function getArticles(index){
     $.ajax({
@@ -113,7 +101,7 @@ $(document).ready(() => {
         pageSize: 8,
         sortBy: 'publishedAt',
         language: "en",
-        sources: 'crypto-coins-news, engadget, techcrunch, the-verge',
+        sources: 'bloomberg, business-insider, cnbc, financial-times, crypto-coins-news, engadget, techcrunch, the-verge',
         apikey: '4f8bd17701bb4e4aa8658ee475c35b3b'
       }
 
@@ -127,6 +115,7 @@ $(document).ready(() => {
         let title = item.title;
         let link = item.url;
         let image = item.urlToImage;
+        console.log(image);
         renderArticles(author, desc, title, link, image)
       })
     })
@@ -145,8 +134,6 @@ $(document).ready(() => {
       }).done(function(curr){
             let cryptoTime = curr.Data.map(item=> item.time).map(time=>(new Date(time *1000)).toLocaleString());
             let cryptoClose = curr.Data.map(item=>item.close);
-            console.log(cryptoTime);
-            console.log(cryptoClose);
             createChart(cryptoTime, cryptoClose, index);
     });
   }
@@ -159,7 +146,7 @@ $(document).ready(() => {
           <h4>Symbol: ${symbol}<h4>
           <p>Rank: # ${rank}<p>
           <p>Price: $ ${price}<p>
-          <h5> Market Capitalization: $${market}<h5>
+          <h5> Market Cap: $${market}<h5>
           <div>
         <div>
         `)
@@ -169,8 +156,8 @@ $(document).ready(() => {
       $('.feed').append(`
         <div>
             <div class = "article">
-               <img src = "${image}" width="100" height="100">
-              <h5>${title}</h5>
+               <img src = "${image ?`${image}`: `"bitcoin.jpeg"`} width="100" height="100">
+              <h4>${title}</h4>
               <h5>${author}</h5>
               <h5>${desc}<h5>
               <a href="${link}" class="buttonArt" target="_blank">VIEW</a>

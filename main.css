@@ -183,7 +183,7 @@ nav{
     padding-bottom: 10px;
   }
   .ticker{
-    background: #d83c3c;
+    background: #7C9FFE/*d83c3c*/;
     color: #fff;
     padding-left: 10px;
     padding-top: 5px;
@@ -192,7 +192,7 @@ nav{
   }
   .ticker h4{
     display: inline-block;
-    font-size: 14px;
+    font-size: 17px;
     padding-left: 8px;
     font-weight: bold;
     line-height: 0.5;
@@ -201,7 +201,7 @@ nav{
   }
   .ticker h5{
     display: block;
-    font-size: 14px;
+    font-size: 18px;
     padding-left: 8px;
     font-weight: bold;
     line-height: 0.5;
