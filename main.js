@@ -101,7 +101,7 @@ $(document).ready(() => {
         pageSize: 8,
         sortBy: 'publishedAt',
         language: "en",
-        sources: 'bloomberg, business-insider, cnbc, financial-times, crypto-coins-news, engadget, techcrunch, the-verge',
+        sources: 'bloomberg, business-insider, cnbc, fortune, financial-times, crypto-coins-news, engadget, techcrunch, the-verge',
         apikey: '4f8bd17701bb4e4aa8658ee475c35b3b'
       }
 
@@ -174,7 +174,7 @@ $(document).ready(() => {
           labels: cryptoTime,
           datasets: [{
             data: cryptoClose,
-            backgroundColor:  '#7C9FFE',//'#425822'
+            backgroundColor: '#011F4B' //'#7C9FFE',//'#425822'
           }]
 
         },
