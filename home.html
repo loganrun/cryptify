@@ -9,72 +9,44 @@
   <title>Cryptify</title>
 </head>
 <body>
-  <header>
-    <nav>
+  <nav>
     <div class=" nav-wrapper" role="navigation">
-      <a href="#" class="logo">Cryptify</a>
+      <a href="#" class="logo">CRYPTIFY</a>
     </div>
   </nav>
-  </header>
   <main class="grid">
-  <section role="search">
-    <div id= "sb-search" class="form-wrapper cf">
-        <form id="searchForm" role="search">
-            <input class="sb-search-input" id="search" placeholder="Enter your search terms" type="search" value="" name="search" required>
-            <button class="searchCurr"type="submit">Search</button>
-        </form>
+    <section role="search">
+      <div id= "sb-search" class="form-wrapper cf">
+          <form id="searchForm" role="search">
+              <input class="sb-search-input" id="search" placeholder="Enter your search terms" type="search" value="" name="search" required>
+              <button class="searchCurr"type="submit">Search</button>
+          </form>
+      </div>
+    </section>
+
+    <div class="container">
+    <div class="chart-wrapper">
+      <div class="nested">
+        <div class="mCap">
+          <h3>Top Currencies</h3>
+          <h4>Based on Market Capitalization</h4>
+        </div>
+      </div>
+      <div id="chart">
+        <canvas id="lineChart" height="700" width="700"></canvas>
+      </div>
     </div>
-  </section>
+    <section>
+      <article>
+          <div class="feed"></div>
+      </article>
+    </section>
 
-  <div class="container">
-  <div class="chart-wrapper">
-    <div class="nested">
-      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, assumenda!</div>
-      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, nihil!</div>
-      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quod.</div>
     </div>
-    <div id="chart">
-      <canvas id="lineChart" height="700" width="700"></canvas>
-    </div>
-    <!-- <div></div> -->
-  </div>
-  <div class="feed"></div>
-  </div>
 
-  <!-- <script type="text/javascript">
-  // window.load = getMyLocation;
-  // var map;
-  //  function getMyLocation(){
-  //    if (navigator.geolocation){
-  //     //  navigator.geolocation.getCurrentPosition(displayLocation);
-  //      console.log("true");
-  //    }else{
-  //      alert('no geolocation support');
-  //    }
-  //  }
-  //
-  // function displayLocation(position){
-  //   var latitude = position.coords.latitude;
-  //   var longitude = position.coords.longitude;
-  //   var latLng = new google.maps.latLng(latitude, longitude);
-  //
-  //   initMap(latLng);
-  // }
-
-
-  function initMap(){
-    map = new google.maps.Map(document.getElementById('map'),{
-      center: {lat: 34.0522, lng: -118.2437},
-      zoom: 8
-    });
-  }
-
-  </script> -->
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKd0ZHOGN4-jozvPAk3hoDvdHHJZr1aIY&libraries=places&callback=initMap"
-    async defer></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
-    <script src="jquery-3.2.1.min.js"></script>
-    <script src="main.js"></script>
-    </main>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+      <script src="jquery-3.2.1.min.js"></script>
+      <script src="main.js"></script>
+  </main>
 </body>
 </html>

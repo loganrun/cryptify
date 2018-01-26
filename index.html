@@ -9,19 +9,26 @@
   <title>Cryptify</title>
 </head>
 <body>
-  <header class="v-header container">
-    <div class="fullscreen-video">
-      <video src="rotocoin.mp4" autoplay="true" loop="true" poster="posterimage.jpg"></video>
-    </div>
-    <div class="header-overlay"></div>
-    <div class="header-content">
-      <h1>Hello</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste neque incidunt architecto facere, facilis libero. Beatae similique atque illo, perspiciatis.</p>
-    </div>
-  </header>
-
-
+  <main>
+    <section>
+      <div class="video-container">
+        <div class="overlay">
+          <div class="fullscreen-video">
+            <video src="rotocoin.mp4" autoplay="true" loop="true" poster="bitcoin.jpeg"></video>
+          </div>
+          <div class="overlay-content">
+            <h1>WELCOME TO CRYPTIFY</h1>
+            <p>Putting the Crypt in Cryptocurrency</p>
+            <form id="searchForm" role="search">
+                <input class="sb-search-input" id="search" placeholder="Enter your search terms" type="search" value="" name="search" required>
+                <button class="searchCurr"type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 <script src="jquery-3.2.1.min.js" charset="utf-8"></script>
-<script src="main.js" charset="utf-8"></script>
+<script src="landing.js" charset="utf-8"></script>
 </body>
 </html>

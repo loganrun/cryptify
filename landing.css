@@ -10,6 +10,7 @@ body{
   overflow-x: hidden;
 }
 
+<<<<<<< HEAD
 .v-header{
   height: 100vh;
   /*display:flex;*/
@@ -25,6 +26,8 @@ body{
   text-align: center;
 }*/
 
+=======
+>>>>>>> landing
 .fullscreen-video{
   position: absolute;
   top: 0;
@@ -43,29 +46,82 @@ body{
   z-index: -100;
 }
 
-.header-overlay{
+.overlay-content{
   height: 100vh;
   width: 100vw;
   position: fixed;
   top: 0;
   left:0;
-  background: #000; /*#225470;*/
-  z-index: 1;
-  opacity: 0.65;
+  background: rgba(0, 0, 0, 0.35);
+  z-index:100;
+  text-align: center;
+
 }
 
-.header-content{
-  z-index:2;
-}
-
-.header-content h1{
+.overlay-content h1{
+  position: relative;
   font-size: 50px;
-  margin-bottom: 0;
+  color: white;
+  margin-top: 250px;
 }
-.header-content p{
-  font-size: 1.5rem;
+.overlay-content p{
+  position: relative;
+  color: white;
+  font-size: 30px;
   display: block;
-  padding-bottom: 2rem;
+}
+
+.form-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 450px;
+  padding: 15px;
+}
+
+.sb-search-input{
+  width: 330px;
+  height: 40px;
+  padding: 10px 5px;
+  font:  bold 15px 'Roboto', 'sans-serif';
+  border: 0;
+  background: #fff;
+  z-index: 5;
+}
+
+.sb-search-input::-webkit-input-placeholder {
+   color: #999;
+   font-weight: normal;
+   font-style: italic;
+}
+
+.sb-search-input:-moz-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.sb-search-input:-ms-input-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.searchCurr {
+	overflow: visible;
+  position: relative;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 110px;
+  font: bold 15px/40px 'Roboto', 'trebuchet MS', 'Tahoma';
+  color: #fff;
+  text-transform: uppercase;
+  background: #d83c3c;
+  -moz-border-radius: 0 3px 3px 0;
+  -webkit-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
 }
 
 /*@@media query {max-width:960px){
