@@ -2,7 +2,7 @@ html, body{
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: /*#555555*/ #262626;
+  background-color: #f5fff8/*#ede7f6/*rgba(255, 223, 250, 0.3);/*#FFdfF4/*#555555 #2626268*/;
 }
 .nav-wrapper{
   display: grid;
@@ -12,7 +12,7 @@ nav{
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #425822 /*#2ACDFF /*#52BE1D*/;
+  background-color: #011F4B/*0348b0/*425822 /*#2ACDFF /*#52BE1D*/;
   text-align: center;
 }
 .logo{
@@ -198,6 +198,7 @@ nav{
     line-height: 0.5;
     margin: 0;
     padding-top: 5px;
+    padding-bottom: 0;
   }
   .ticker h5{
     display: block;

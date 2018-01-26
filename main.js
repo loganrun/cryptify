@@ -156,7 +156,7 @@ $(document).ready(() => {
       $('.feed').append(`
         <div>
             <div class = "article">
-               <img src = "${image ?`${image}`: `"bitcoin.jpeg"`} width="100" height="100">
+              <img src = "${image ?`${image}`: `"bitcoin.jpeg"`}" width="100" height="100">
               <h4>${title}</h4>
               <h5>${author}</h5>
               <h5>${desc}<h5>
@@ -174,7 +174,7 @@ $(document).ready(() => {
           labels: cryptoTime,
           datasets: [{
             data: cryptoClose,
-            backgroundColor:  '#425822'
+            backgroundColor:  '#7C9FFE',//'#425822'
           }]
 
         },
