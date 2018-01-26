@@ -120,15 +120,9 @@ nav {
   width: 650px;
   margin-top: 20px;
 }
-<<<<<<< HEAD
-.container{
-  width: 100%;
-  /*width: 960px;*/
-=======
 
 .container {
   width: 100%;
->>>>>>> landing
   height: auto;
   margin: 0 auto;
   background-color: #fff;
@@ -174,20 +168,12 @@ nav {
   background-color: #018ABE;
   margin-left: 5px;
 }
-<<<<<<< HEAD
-@media(min-width: 760px){
-  .container{
-    width: 960px;
-  }
-  .nested{
-=======
 
 @media(min-width: 760px) {
   .container {
     width: 960px;
   }
   .nested {
->>>>>>> landing
     display: grid;
     margin-left: 20px;
     margin-top: 20px;

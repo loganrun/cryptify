@@ -10,24 +10,6 @@ body{
   overflow-x: hidden;
 }
 
-<<<<<<< HEAD
-.v-header{
-  height: 100vh;
-  /*display:flex;*/
-  align-items: center;
-  color:#fff;
-}
-
-/*.container{
-  max-width: 960px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin:auto;
-  text-align: center;
-}*/
-
-=======
->>>>>>> landing
 .fullscreen-video{
   position: absolute;
   top: 0;
