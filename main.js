@@ -187,9 +187,10 @@ $(document).ready(() => {
           },
           legend:{
             display: false,
-          }
+          },
+          responsive: true,
         }
-      })
+      });
     }
 
 
