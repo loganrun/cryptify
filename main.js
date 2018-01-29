@@ -7,6 +7,8 @@ $(document).ready(() => {
   }else{
     window.location = "index.html";
   }
+  
+  
 
   $('#searchForm').on('submit', (e) =>{
     let searchText = $('#search').val();
@@ -71,12 +73,29 @@ $(document).ready(() => {
       getQuotes(index);
       break;
       default:
+      toggleModal();
       index = 'BTC';
       getArticles(index);
       getQuotes(index);
-      alert("Currency Not Found.  Please Try Again");
     }
   }
+  
+  function toggleModal() {
+    $('.error').append(`
+    <div class="modal">
+        <div class="modal-content" >
+            <span class="close-button">&times;</span>
+            <h1 role="alert" aria-atomic="true">Coin Not Found.</h1> 
+            <h1>Please Try Again.</h1>
+        </div>
+    </div>
+    `);
+  
+  }
+  
+  $('.error').on('click', (e) =>{
+     $('.error').empty();
+   });
 
   function cryptoMarket(){
     $.ajax({
@@ -90,8 +109,8 @@ $(document).ready(() => {
         let market = parseInt(item.market_cap_usd, 10).toLocaleString('en');
         let price = item.price_usd;
         renderMarket(name, symbol,rank, price, market);
-      })
-    })
+      });
+    });
   }
 
   function getArticles(index){
@@ -116,9 +135,9 @@ $(document).ready(() => {
         let link = item.url;
         let image = item.urlToImage;
         console.log(image);
-        renderArticles(author, desc, title, link, image)
-      })
-    })
+        renderArticles(author, desc, title, link, image);
+      });
+    });
   }
 
    function getQuotes(index){
@@ -149,7 +168,7 @@ $(document).ready(() => {
           <h5> Market Cap: $${market}<h5>
           <div>
         <div>
-        `)
+        `);
     }
 
     function renderArticles(author, desc, title, link, image){
@@ -163,7 +182,7 @@ $(document).ready(() => {
               <a href="${link}" class="buttonArt" target="_blank">VIEW</a>
             </div>
         </div>
-        `)
+        `);
     }
 
     function createChart(cryptoTime, cryptoClose, index){
@@ -174,7 +193,7 @@ $(document).ready(() => {
           labels: cryptoTime,
           datasets: [{
             data: cryptoClose,
-            backgroundColor: '#011F4B' //'#7C9FFE',//'#425822'
+            backgroundColor: '#011F4B' 
           }]
 
         },
@@ -192,17 +211,5 @@ $(document).ready(() => {
         }
       });
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 });
